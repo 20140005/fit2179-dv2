@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 800,
+  "height": 500,
+
+  "title": "Student Affordability Across Australia",
+
+  "data": {
+    "url": "../data/australia_states.geojson"
+  },
+
+  "projection": {
+    "type": "mercator"
+  },
+
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+
+  "encoding": {
+    "color": {
+      "value": "#4F81BD"
+    }
+  }
+}
