@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 850,
+  "height": 450,
+
+  "title": "Rising Student Rent Costs Across Australian Cities",
+
+  "config": {
+    "background": "#f8f8f8"
+  },
+
+  "data": {
+    "url": "../data/rent_growth.csv"
+  },
+
+  "mark": {
+    "type": "line",
+    "point": true,
+    "strokeWidth": 3
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "year",
+      "type": "temporal",
+      "title": "Year"
+    },
+
+    "y": {
+      "field": "median_rent",
+      "type": "quantitative",
+      "title": "Median Weekly Rent ($)"
+    },
+
+    "color": {
+      "field": "city",
+      "type": "nominal",
+      "title": "City"
+    },
+
+    "tooltip": [
+      {
+        "field": "city",
+        "type": "nominal"
+      },
+      {
+        "field": "year",
+        "type": "temporal"
+      },
+      {
+        "field": "median_rent",
+        "type": "quantitative",
+        "title": "Weekly Rent ($)"
+      }
+    ]
+  }
+}

@@ -6,6 +6,10 @@
 
   "title": "Student Living Costs Across Australian Cities",
 
+  "config": {
+    "background": "#f8f8f8"
+  },
+
   "layer": [
 
     {

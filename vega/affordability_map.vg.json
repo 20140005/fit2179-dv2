@@ -6,6 +6,10 @@
 
   "title": "Student Affordability Across Australia",
 
+  "config": {
+    "background": "#f8f8f8"
+  },
+
   "data": {
     "url": "../data/australia_states.geojson"
   },
