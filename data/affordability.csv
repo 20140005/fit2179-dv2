@@ -1,0 +1,9 @@
+city,total_cost,hourly_wage,hours_needed,affordability_score
+Melbourne,1387,24.95,55.59,44
+Sydney,1635,24.95,65.53,34
+Brisbane,1426,24.95,57.15,43
+Perth,1400,24.95,56.11,44
+Adelaide,1452,24.95,58.20,42
+Canberra,1389,24.95,55.67,44
+Hobart,1189,24.95,47.66,52
+Darwin,1309,24.95,52.46,48
