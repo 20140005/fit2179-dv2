@@ -7,7 +7,7 @@
   "title": "Student Affordability Across Australia",
 
   "data": {
-    "url": "/data/australia_states.geojson"
+    "url": "../data/australia_states.geojson"
   },
 
   "projection": {
