@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": "Weekly Student Budget Breakdown Across Australian Cities",
+
+  "config": {
+    "background": "#f8f8f8"
+  },
+
+  "data": {
+    "url": "../data/small_multiples.csv"
+  },
+
+  "facet": {
+    "field": "city",
+    "type": "nominal",
+    "columns": 4,
+    "title": null
+  },
+
+  "spec": {
+
+    "width": 150,
+    "height": 120,
+
+    "mark": {
+      "type": "bar",
+      "cornerRadiusEnd": 4
+    },
+
+    "encoding": {
+
+      "x": {
+        "field": "category",
+        "type": "nominal",
+        "axis": {
+          "labelAngle": -30
+        },
+        "title": null
+      },
+
+      "y": {
+        "field": "cost",
+        "type": "quantitative",
+        "title": "Cost ($)"
+      },
+
+      "color": {
+        "field": "category",
+        "type": "nominal",
+        "legend": null
+      },
+
+      "tooltip": [
+        {
+          "field": "city",
+          "type": "nominal"
+        },
+        {
+          "field": "category",
+          "type": "nominal"
+        },
+        {
+          "field": "cost",
+          "type": "quantitative"
+        }
+      ]
+    }
+  }
+}
