@@ -1,14 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 750,
+  "width": 1000,
   "height": 400,
 
   "title": "Hours Students Must Work Weekly to Afford Living Costs",
-
-  "config": {
-    "background": "#f8f8f8"
-  },
 
   "data": {
     "url": "../data/affordability.csv"
@@ -39,7 +35,7 @@
       "type": "quantitative",
       "title": "Affordability",
       "scale": {
-        "scheme": "redyellowgreen"
+        "scheme": "blueorange"
       }
     },
 

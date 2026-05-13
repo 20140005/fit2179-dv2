@@ -1,14 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 850,
+  "width": 1000,
   "height": 450,
 
-  "title": "How Student Spending Changed Between 2020 and 2025",
-
-  "config": {
-    "background": "#f8f8f8"
-  },
+  "title": "How Student Spending Has Shifted",
 
   "data": {
     "url": "../data/spending_stream.csv"

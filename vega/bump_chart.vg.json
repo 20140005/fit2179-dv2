@@ -1,14 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 750,
+  "width": 1000,
   "height": 450,
 
-  "title": "How Australian Cities Changed in Student Affordability Rankings",
+  "title": "Changing Affordability Rankings",
 
-  "config": {
-    "background": "#f8f8f8"
-  },
 
   "data": {
     "url": "../data/affordability_rankings.csv"
@@ -20,7 +17,7 @@
       "filled": true,
       "size": 90
     },
-    "strokeWidth": 4
+    "strokeWidth": 6
   },
 
   "encoding": {
@@ -47,7 +44,8 @@
 
     "color": {
       "field": "city",
-      "type": "nominal"
+      "type": "nominal",
+      "legend": null
     },
 
     "tooltip": [

@@ -3,10 +3,6 @@
 
   "title": "Weekly Student Budget Breakdown Across Australian Cities",
 
-  "config": {
-    "background": "#f8f8f8"
-  },
-
   "data": {
     "url": "../data/small_multiples.csv"
   },
@@ -14,9 +10,10 @@
   "facet": {
     "field": "city",
     "type": "nominal",
-    "columns": 4,
     "title": null
   },
+
+  "columns": 4,
 
   "spec": {
 

@@ -1,13 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 500,
+  "width": 1000,
   "height": 500,
 
   "title": "Where Does a Melbourne Student's Money Go?",
 
   "config": {
-    "background": "#f8f8f8",
     "view": {
       "stroke": null
     }
@@ -19,9 +18,10 @@
 
   "mark": {
     "type": "arc",
-    "innerRadius": 80,
+    "innerRadius": 120,
     "stroke": "white",
-    "strokeWidth": 2
+    "strokeWidth": 2,
+    "cornerRadius": 8
   },
 
   "encoding": {

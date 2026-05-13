@@ -1,14 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 700,
+  "width": 1000,
   "height": 350,
 
   "title": "Student Expense Breakdown Across Australian Cities",
 
-  "config": {
-    "background": "#f8f8f8"
-  },
 
   "data": {
     "url": "../data/cost_breakdown.csv"

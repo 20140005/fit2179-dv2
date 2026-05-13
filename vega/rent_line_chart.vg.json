@@ -1,14 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 850,
+  "width": 1000,
   "height": 450,
 
-  "title": "Rising Student Rent Costs Across Australian Cities",
-
-  "config": {
-    "background": "#f8f8f8"
-  },
+  "title": "Australia's Rising Student Rent Crisis",
 
   "data": {
     "url": "../data/rent_growth.csv"

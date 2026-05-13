@@ -14,37 +14,249 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/vega_theme.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <h1>Can Students Still Afford Australian Cities?</h1>
+    <!-- HERO SECTION -->
 
-    <div id="map_vis"></div>
-    <div id="bubble_vis"></div>
-    <div id="line_vis"></div>
-    <div id="heatmap_vis"></div>
-    <div id="hours_vis"></div>
-    <div id="radial_vis"></div>
-    <div id="slope_vis"></div>
-    <div id="bump_vis"></div>
-    <div id="stream_vis"></div>
-    <div id="multiples_vis"></div>
+    <section class="hero">
+
+        <h1>Can Students Still Afford Australian Cities?</h1>
+
+        <p>
+            Rising rents, increasing living expenses, and growing financial pressure are reshaping student life across Australia.
+        </p>
+
+        <h3>
+            Sydney students now require over 65 work hours weekly to afford average living costs.
+        </h3>
+
+        <div class="stat-highlight">
+            65+ Hours
+        </div>
+
+        <div class="stat-caption">
+            Average weekly work hours needed for Sydney students to cover living costs
+        </div>
+
+    </section>
+
+
+    <!-- SECTION 1 -->
+
+    <section class="section">
+
+        <h2>Where Is Student Life Most Expensive?</h2>
+        <div class="section-divider"></div>
+
+        <p>
+            Living costs vary significantly across Australian cities. While Sydney remains the most expensive city for students, smaller cities such as Hobart continue to offer comparatively affordable lifestyles.
+        </p>
+
+        <div class="chart-container">
+            <div id="map_vis"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="bubble_vis"></div>
+        </div>
+        
+
+        <div class="insight-box">
+            <h3>Sydney Remains Australia's Least Affordable Student City</h3>
+            <p>Students in Sydney face the highest weekly living costs in Australia, driven primarily by rapidly increasing rental prices.</p>
+        </div>
+
+    </section>
+
+    
+
+
+    <!-- SECTION 2 -->
+
+    <section class="section">
+
+        <h2>The Rent Crisis</h2>
+        <div class="section-divider"></div>
+
+        <p>
+            Since 2020, rental prices across Australia have increased sharply, creating significant financial pressure for university students.
+        </p>
+
+        <div class="chart-container">
+            <div id="line_vis"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="slope_vis"></div>
+        </div>
+
+        <div class="insight-box">
+            <h3>Rent Growth Has Accelerated Since 2020</h3>
+            <p>Rental prices across major Australian cities have increased dramatically over the last five years, placing increasing pressure on students.</p>
+        </div>
+
+    </section>
+
+
+    <!-- SECTION 3 -->
+
+    <section class="section">
+
+        <h2>Where Does Student Money Go?</h2>
+        <div class="section-divider"></div>
+
+        <p>
+            Rent consumes the largest portion of student budgets, leaving limited flexibility for food, transport, utilities, and entertainment.
+        </p>
+
+        <div class="chart-container">
+            <div id="heatmap_vis"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="radial_vis"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="multiples_vis"></div>
+        </div>
+
+    </section>
+
+
+    <!-- SECTION 4 -->
+
+    <section class="section">
+
+        <h2>The Human Impact</h2>
+        <div class="section-divider"></div>
+
+        <p>
+            Students increasingly rely on part-time work to manage rising living costs, with some cities requiring unsustainable working hours.
+        </p>
+
+        <div class="chart-container">
+            <div id="hours_vis"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="bump_vis"></div>
+        </div>
+
+        <div class="insight-box"><h3>Students Must Work Longer Hours Than Ever Before</h3>
+            <p>In some Australian cities, students now require over 60 hours of work per week to cover average living expenses.</p>
+        </div>
+
+    </section>
+
+
+    <!-- SECTION 5 -->
+
+    <section class="section">
+
+        <h2>Changing Spending Patterns</h2>
+        <div class="section-divider"></div>
+
+        <p>
+            Over time, essential expenses such as rent and utilities have consumed increasingly larger portions of student budgets.
+        </p>
+
+        <div class="chart-container">
+            <div id="stream_vis"></div>
+        </div>
+
+    </section>
+
+
+    <!-- CONCLUSION -->
+
+    <section class="section">
+
+        <h2>Conclusion</h2>
+        <div class="section-divider"></div>
+
+        <p>
+            While Australian cities continue attracting university students, rising living costs are making student life increasingly difficult and financially unsustainable.
+        </p>
+
+        <div class="insight-box">
+            <h3>The Cost of Education Is No Longer Just Tuition</h3>
+            <p>For many students, rising living costs are becoming one of the greatest barriers to higher education in Australia.</p>
+
+</div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Created by ARNAV JAIN | FIT2179 Data Visualisation 2 | 2026
+        </p>
+
+        <p>
+            Data Sources: Study Australia, ABS, Fair Work Ombudsman
+        </p>
+
+        <p>
+            Some text and design ideas were assisted using generative AI tools.
+        </p>
+
+    </footer>
+
+
+
+    <!-- VEGA EMBEDS -->
+
 
     <script>
-        vegaEmbed("#map_vis", "vega/affordability_map.vg.json");
-        vegaEmbed("#bubble_vis", "vega/bubble_map.vg.json");
-        vegaEmbed("#line_vis", "vega/rent_line_chart.vg.json");
-        vegaEmbed("#heatmap_vis", "vega/cost_heatmap.vg.json");
-        vegaEmbed("#hours_vis", "vega/work_hours_chart.vg.json");
-        vegaEmbed("#radial_vis", "vega/radial_budget_chart.vg.json");
-        vegaEmbed("#slope_vis", "vega/rent_slope_chart.vg.json");
-        vegaEmbed("#bump_vis", "vega/bump_chart.vg.json");
-        vegaEmbed("#stream_vis", "vega/streamgraph.vg.json");
-        vegaEmbed("#multiples_vis", "vega/small_multiples.vg.json");
+        vegaEmbed("#map_vis", "vega/affordability_map.vg.json", {theme: vegaTheme, actions: false});
     </script>
 
+    <script>
+        vegaEmbed("#bubble_vis", "vega/bubble_map.vg.json", {theme: vegaTheme, actions: false});
+    </script>
+
+    <script>
+        vegaEmbed("#line_vis", "vega/rent_line_chart.vg.json", {theme: vegaTheme, actions: false});
+    </script>
+
+    <script>
+        vegaEmbed("#heatmap_vis", "vega/cost_heatmap.vg.json", {theme: vegaTheme, actions: false});
+    </script>
+
+    <script>
+        vegaEmbed("#hours_vis", "vega/work_hours_chart.vg.json", {theme: vegaTheme, actions: false});
+    </script>
+
+    <script>
+        vegaEmbed("#radial_vis", "vega/radial_budget_chart.vg.json", {theme: vegaTheme, actions: false});
+    </script>
+
+    <script>
+        vegaEmbed("#slope_vis", "vega/rent_slope_chart.vg.json", {theme: vegaTheme, actions: false});
+    </script>
+
+    <script>
+        vegaEmbed("#bump_vis", "vega/bump_chart.vg.json", {theme: vegaTheme, actions: false});
+    </script>
+
+    <script>
+        vegaEmbed("#stream_vis", "vega/streamgraph.vg.json", {theme: vegaTheme, actions: false});
+    </script>
+
+    <script>
+        vegaEmbed("#multiples_vis", "vega/small_multiples.vg.json", {theme: vegaTheme, actions: false});
+    </script>
 
 </body>
 

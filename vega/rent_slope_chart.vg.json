@@ -1,14 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 700,
+  "width": 1000,
   "height": 450,
 
   "title": "How Student Rent Changed Between 2020 and 2025",
-
-  "config": {
-    "background": "#f8f8f8"
-  },
 
   "data": {
     "url": "../data/rent_slope.csv"
