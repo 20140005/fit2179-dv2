@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 750,
+  "height": 400,
+
+  "title": "Hours Students Must Work Weekly to Afford Living Costs",
+
+  "config": {
+    "background": "#f8f8f8"
+  },
+
+  "data": {
+    "url": "../data/affordability.csv"
+  },
+
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 6
+  },
+
+  "encoding": {
+
+    "y": {
+      "field": "city",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "City"
+    },
+
+    "x": {
+      "field": "hours_needed",
+      "type": "quantitative",
+      "title": "Work Hours Required Per Week"
+    },
+
+    "color": {
+      "field": "affordability_score",
+      "type": "quantitative",
+      "title": "Affordability",
+      "scale": {
+        "scheme": "redyellowgreen"
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "city",
+        "type": "nominal"
+      },
+      {
+        "field": "hours_needed",
+        "type": "quantitative",
+        "title": "Hours Needed"
+      },
+      {
+        "field": "total_cost",
+        "type": "quantitative",
+        "title": "Weekly Cost ($)"
+      }
+    ]
+  }
+}
