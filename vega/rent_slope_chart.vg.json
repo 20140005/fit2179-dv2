@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 700,
+  "height": 450,
+
+  "title": "How Student Rent Changed Between 2020 and 2025",
+
+  "config": {
+    "background": "#f8f8f8"
+  },
+
+  "data": {
+    "url": "../data/rent_slope.csv"
+  },
+
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 80
+    },
+    "strokeWidth": 3
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null
+    },
+
+    "y": {
+      "field": "rent",
+      "type": "quantitative",
+      "title": "Weekly Rent ($)"
+    },
+
+    "detail": {
+      "field": "city"
+    },
+
+    "color": {
+      "field": "city",
+      "type": "nominal",
+      "legend": null
+    },
+
+    "tooltip": [
+      {
+        "field": "city",
+        "type": "nominal"
+      },
+      {
+        "field": "year",
+        "type": "ordinal"
+      },
+      {
+        "field": "rent",
+        "type": "quantitative",
+        "title": "Weekly Rent ($)"
+      }
+    ]
+  }
+}
