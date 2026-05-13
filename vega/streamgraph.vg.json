@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 850,
+  "height": 450,
+
+  "title": "How Student Spending Changed Between 2020 and 2025",
+
+  "config": {
+    "background": "#f8f8f8"
+  },
+
+  "data": {
+    "url": "../data/spending_stream.csv"
+  },
+
+  "mark": {
+    "type": "area",
+    "interpolate": "monotone"
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+
+    "y": {
+      "field": "cost",
+      "type": "quantitative",
+      "stack": "center",
+      "title": "Student Spending"
+    },
+
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "title": "Expense Category"
+    },
+
+    "tooltip": [
+      {
+        "field": "category",
+        "type": "nominal"
+      },
+      {
+        "field": "year",
+        "type": "ordinal"
+      },
+      {
+        "field": "cost",
+        "type": "quantitative",
+        "title": "Cost ($)"
+      }
+    ]
+  }
+}
