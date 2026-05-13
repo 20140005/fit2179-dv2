@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 700,
+  "height": 350,
+
+  "title": "Student Expense Breakdown Across Australian Cities",
+
+  "config": {
+    "background": "#f8f8f8"
+  },
+
+  "data": {
+    "url": "../data/cost_breakdown.csv"
+  },
+
+  "mark": "rect",
+
+  "encoding": {
+
+    "x": {
+      "field": "city",
+      "type": "nominal",
+      "title": "City"
+    },
+
+    "y": {
+      "field": "category",
+      "type": "nominal",
+      "title": "Expense Category"
+    },
+
+    "color": {
+      "field": "cost",
+      "type": "quantitative",
+      "title": "Weekly Cost ($)",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "city",
+        "type": "nominal"
+      },
+      {
+        "field": "category",
+        "type": "nominal"
+      },
+      {
+        "field": "cost",
+        "type": "quantitative",
+        "title": "Cost ($)"
+      }
+    ]
+  }
+}
