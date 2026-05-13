@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 500,
+  "height": 500,
+
+  "title": "Where Does a Melbourne Student's Money Go?",
+
+  "config": {
+    "background": "#f8f8f8",
+    "view": {
+      "stroke": null
+    }
+  },
+
+  "data": {
+    "url": "../data/melbourne_budget.csv"
+  },
+
+  "mark": {
+    "type": "arc",
+    "innerRadius": 80,
+    "stroke": "white",
+    "strokeWidth": 2
+  },
+
+  "encoding": {
+
+    "theta": {
+      "field": "cost",
+      "type": "quantitative"
+    },
+
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "title": "Expense Category"
+    },
+
+    "tooltip": [
+      {
+        "field": "category",
+        "type": "nominal"
+      },
+      {
+        "field": "cost",
+        "type": "quantitative",
+        "title": "Weekly Cost ($)"
+      }
+    ]
+  }
+}
